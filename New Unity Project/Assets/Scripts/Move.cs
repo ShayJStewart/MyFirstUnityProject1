@@ -5,6 +5,7 @@ public class Move : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		//codes for moving the objct up down lft and right using the arrow keys
 		if (Input.GetKey (KeyCode.LeftArrow)) {
 			gameObject.transform.Translate (-.5f, 0, 0);
 		}
