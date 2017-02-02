@@ -4,6 +4,7 @@ using System.Collections;
 public class changeColor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
+		//codes that are using respective keyboard shortcuts to change player's color
 		if (Input.GetKeyDown (KeyCode.R)) {
 			GetComponent<Renderer>().material.color = Color.red;
 		}
