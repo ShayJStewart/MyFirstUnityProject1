@@ -22,6 +22,8 @@ using\cf3  UnityEngine;\uc0\u8232 \cf4 using\cf3  System.Collections;\uc0\u8232 
 \cf2 //below we are calling out a public float variable. The variable allows us to substitute the name of the variable into the code so that instead of hard coding it into every place that needs it, we simply put \'91rotX\'92 in the place of the number and that allows us to change that number easily whenever we want outside of messing with the update function.\
 \
 //when creating a variable, you have to give it a name(aka an identifier and a value ex. 20, 11, etc\
+\
+//variables don\'92t have to be named floats. they have several names that they can go by that declare different things. ex. int, char, string, etc.\
 \cf3 \uc0\u8232 	\cf4 public\cf3  \cf4 float\cf3  speed;\uc0\u8232 	\cf4 public\cf3  \cf4 float\cf3  rotX = \cf6 15\cf3 ;\uc0\u8232 	\cf4 public\cf3  \cf4 float\cf3  rotY = \cf6 30\cf3 ;\uc0\u8232 	\cf4 public\cf3  \cf4 float\cf3  rotZ = \cf6 45\cf3 ;\
 \
 \cf2 //public means that we can access that variable/ feature outside of the scripting window, In Unity for example. Private means that it will only be accessible in the scripting window\cf3 \uc0\u8232 \u8232 	
