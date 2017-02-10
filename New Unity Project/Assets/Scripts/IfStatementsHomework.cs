@@ -77,6 +77,7 @@ public class IfStatementsHomework : MonoBehaviour {
 		{
 			print ("Pidge is my favorite Voltron Legendary Defender Character and she is the smartest girl on the team!");
 		}
+		// If statements below are used to determine if the number put in is higher or lower than my favorite numbers
 		if (MyLuckyNumber >= 8)
 		{
 			print ("hey, that's close to my favorite number!");
