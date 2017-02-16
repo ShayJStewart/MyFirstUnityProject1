@@ -1,0 +1,81 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class IfElseStatements : MonoBehaviour {
+	private string Teacher = "Clayton";
+	private string Student = "Dave";
+
+	// Use this for initialization
+	void Start () {
+		/*The following If and else statements are checking to see if the student and teacher are the same. if they aren't the same, then it spits out the 
+		 * teacher and student's name and the phrase ' teacher is student's scripting teacher, but with the names replaced with their names. If the teacher and student 
+		 * are the same, then it spits out that the teacher has now become the student*/
+
+		if (Teacher == Student) 
+		{
+			print ("The Teacher Has now become the student");
+		} 
+		else 
+		{
+			print (Teacher + " Is " + Student + "'s" + " Scripting teacher!");
+		}
+
+		/* I wanted to try practicing while loops since these are kinda hard for me to understand, but I'm finally understanding them. This while loop
+		 * will start at  1 and get timesed by 3 until it stops when it reaches 27 */
+
+		int RandomNumber = 1;
+		while (RandomNumber < 27)
+		{
+			print (RandomNumber);
+			RandomNumber*=3;
+		}
+
+		/* I got to admit, this is a lot of fun haha. Here I used a switch statement to check for the hair color of a random human. I check to see if their hair color
+		 * is blonde like the default hair I put in*/
+
+		string Hair = "Blonde";
+		switch(Hair)
+		{
+			case "Brunette":
+			print("Brunette");
+			break;
+
+			case "Pink":
+			print("Pink");
+			break;
+
+			case "Blonde":
+			print("Blonde");
+			break;
+		}
+
+		/*so far I've struggled the most with for loops, but I'm starting to understand. You set certain ' hoops' the code has to jump through in order to run
+		 * and it runs until all the requiremebts/ 'hoops' are met. In this case, it runs until the number is 4 away from 20. It also prints along the way what the
+		 * numbers are as it works it's way to 20*/
+
+		for (int x = 0; x < 20; x+=4)
+		{
+			print(x);
+		}
+		/* This last example, so number 5 is an example of the else if function. In this one I have a pie with 4 sections and I amd checking to see how
+		 * much of the pie has been eaten. with else if statements it lets you look for and run code if that requirement is met and if it is not met, 
+		 * it will move on to the next statement and if none are met, it will go to the else statement at the end*/
+
+		float Pie = 4.0f;
+		if (Pie == 1.0f) 
+		{
+			print ("You ate a fourth of the pie!");
+		} 
+		else if (Pie == 2.0f) {
+			print ("You ate half the pie!");
+		} 
+		else if (Pie == 4.0f) 
+		{
+			print ("You ate the whole pie, wow!");
+		} else 
+		{
+			print ("You ate no pie...bummer...");
+		}
+	}
+
+}
