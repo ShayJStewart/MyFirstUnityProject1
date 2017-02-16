@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class IfStatementsHomework : MonoBehaviour {
-	private string superhero = "Spider-man";
+	private string superhero = "Captain America";
 	private bool snoring = true;
 	private int MyAge = 20;
-	private float MyFriendAge = 22f;
+	private float MyFriendAge = 20f;
 	private string LegendaryDefender = "Pidge";
 	private int MyLuckyNumber = 7;
 
