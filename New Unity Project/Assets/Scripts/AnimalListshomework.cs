@@ -14,6 +14,8 @@ public class AnimalListshomework : MonoBehaviour {
 		zooRoster.Add("Zebra");
 	}
 
+	/*this function is used to check if there is an animal name in the field and if so, it will add the animal. When clicking on any button,
+	make sure to click twice to get it to work*/
 
 	public void AddAnimal()
 	{
@@ -26,6 +28,8 @@ public class AnimalListshomework : MonoBehaviour {
 		}
 	}
 
+	/*This function does the oppostie of the above functiona dn tests to see if there is an animal name typed into the input field and deletes that
+	 * animal from the list. works also if you type an already existing animal name*/
 	public void RemoveAnimal()
 	{
 		if (animal != "") 
@@ -35,21 +39,17 @@ public class AnimalListshomework : MonoBehaviour {
 				zooRoster.Remove (animal);
 			}
 		}
-		/*if (animal == selected
-		zooRoster.Remove(animal);*/
+
 	}
 
-	/*public void PrintAll()
-	{
-		print (" Your zoo list :" + zooRoster[(0, zooRoster.Length)]);
-	}*/
-
+	/*clears all of the items of the list then prints that there are no animals*/
 	public void ClearAll()
 	{
 		zooRoster.Clear();
 		print ("No animals to show");
 	}
 
+	/*this prints all of the animals in the list*/
 	public void PrintAll()
 	{
 		print ("Zoo Roster:");
