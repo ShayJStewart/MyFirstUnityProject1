@@ -40,6 +40,14 @@ public class AnimalListshomework : MonoBehaviour {
 			}
 		}
 
+		/* Just writing example from class in this comment section so I have for reference later.
+		 * {
+		 * if (zooRoster.Contains(animal))
+		 * {
+		 * zooRoster.Remove(animal);
+		 * }
+		 * }*/
+
 	}
 
 	/*clears all of the items of the list then prints that there are no animals*/
