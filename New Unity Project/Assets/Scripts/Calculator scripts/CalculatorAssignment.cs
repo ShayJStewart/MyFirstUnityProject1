@@ -25,6 +25,7 @@ public class CalculatorAssignment : MonoBehaviour {
 	void Start ()
 	{
 		RandomNumbers ();
+		AnswerEqual ();
 		//RandomThing ();
 		Add ();
 		Subtract ();
@@ -98,6 +99,17 @@ public class CalculatorAssignment : MonoBehaviour {
 		Dividebutton.interactable = false;
 	}
 
+
+	public void AnswerEqual()
+	{
+		foreach (Text element in RandomNumbersList)
+		{
+			if (Answers.text == element.text) 
+			{
+				RandomNumbersList.Remove(element.text);
+			} 
+		}
+	}
 	// Update is called once per frame
 	void Update () {
 		//transform.Translate (Vector3.down * fallSpeed * Time.deltaTime, Space.World);
