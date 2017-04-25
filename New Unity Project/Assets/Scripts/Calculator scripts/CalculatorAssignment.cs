@@ -25,8 +25,6 @@ public class CalculatorAssignment : MonoBehaviour {
 	void Start ()
 	{
 		RandomNumbers ();
-		AnswerEqual ();
-		//RandomThing ();
 		Add ();
 		Subtract ();
 		Multiply ();
@@ -42,6 +40,7 @@ public class CalculatorAssignment : MonoBehaviour {
 	{
 		Result = float.Parse (UserInput1.text) + float.Parse (UserInput2.text);
 		Answers.text = Result.ToString ();
+		AnswerEqual ();
 	}
 
 	//subtract the input fields together
@@ -49,6 +48,7 @@ public class CalculatorAssignment : MonoBehaviour {
 	{
 		Result = float.Parse (UserInput1.text) - float.Parse (UserInput2.text);
 		Answers.text = Result.ToString ();
+		AnswerEqual ();
 	}
 
 	//multiply the input fields together
@@ -56,6 +56,7 @@ public class CalculatorAssignment : MonoBehaviour {
 	{
 		Result = float.Parse (UserInput1.text) * float.Parse (UserInput2.text);
 		Answers.text = Result.ToString ();
+		AnswerEqual ();
 	}
 
 	//divide the input fields together
@@ -63,6 +64,7 @@ public class CalculatorAssignment : MonoBehaviour {
 	{
 		Result = float.Parse (UserInput1.text) / float.Parse (UserInput2.text);
 		Answers.text = Result.ToString ();
+		AnswerEqual ();
 	}
 
 	//randomizes the numbers in the list
@@ -106,10 +108,23 @@ public class CalculatorAssignment : MonoBehaviour {
 		{
 			if (Answers.text == element.text) 
 			{
-				RandomNumbersList.Remove(element.text);
+				Destroy(element);
 			} 
 		}
 	}
+
+	private void OnTriggerEnter(Collider )
+	{
+		GameOver ();
+	}
+
+	private void GameOver()
+	{
+		other.enabled = true;
+		print ("Game Over");
+	}
+
+
 	// Update is called once per frame
 	void Update () {
 		//transform.Translate (Vector3.down * fallSpeed * Time.deltaTime, Space.World);
