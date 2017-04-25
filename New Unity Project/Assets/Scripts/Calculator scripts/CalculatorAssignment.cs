@@ -116,13 +116,13 @@ public class CalculatorAssignment : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
+		Destroy (other.gameObject);
 		GameOver ();
 	}
 
 	private void GameOver()
 	{
 		GameOverText.enabled = true;
-		print ("Game Over");
 	}
 
 
