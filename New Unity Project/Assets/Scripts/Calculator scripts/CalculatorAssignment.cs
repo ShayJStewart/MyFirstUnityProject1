@@ -18,6 +18,7 @@ public class CalculatorAssignment : MonoBehaviour {
 	public Button Multiplybutton;
 	public Button Dividebutton;
 	public Text Answers;
+	public Text GameOverText;
 
 	public List<Text> RandomNumbersList = new List<Text>();
 
@@ -113,16 +114,16 @@ public class CalculatorAssignment : MonoBehaviour {
 		}
 	}
 
-	/*private void OnTriggerEnter(Collider )
+	private void OnTriggerEnter(Collider other)
 	{
 		GameOver ();
-	}*/
+	}
 
-	/*private void GameOver()
+	private void GameOver()
 	{
-		.enabled = true;
+		GameOverText.enabled = true;
 		print ("Game Over");
-	}*/
+	}
 
 
 	// Update is called once per frame
