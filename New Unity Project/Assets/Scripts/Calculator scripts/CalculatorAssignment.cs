@@ -113,16 +113,16 @@ public class CalculatorAssignment : MonoBehaviour {
 		}
 	}
 
-	private void OnTriggerEnter(Collider )
+	/*private void OnTriggerEnter(Collider )
 	{
 		GameOver ();
-	}
+	}*/
 
-	private void GameOver()
+	/*private void GameOver()
 	{
-		other.enabled = true;
+		.enabled = true;
 		print ("Game Over");
-	}
+	}*/
 
 
 	// Update is called once per frame
