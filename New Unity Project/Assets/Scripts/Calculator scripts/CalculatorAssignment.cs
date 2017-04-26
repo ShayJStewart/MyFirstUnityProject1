@@ -109,7 +109,7 @@ public class CalculatorAssignment : MonoBehaviour {
 		{
 			if (Answers.text == element.text) 
 			{
-				Destroy(element);
+				Destroy (element);
 			} 
 		}
 	}
@@ -124,6 +124,8 @@ public class CalculatorAssignment : MonoBehaviour {
 	{
 		GameOverText.enabled = true;
 	}
+
+
 
 
 	// Update is called once per frame
