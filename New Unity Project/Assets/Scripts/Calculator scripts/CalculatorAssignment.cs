@@ -102,7 +102,7 @@ public class CalculatorAssignment : MonoBehaviour {
 		Dividebutton.interactable = false;
 	}
 
-
+	//checks to see if the answer and one of the numbers is equal and then deletes the number if they are equal
 	public void AnswerEqual()
 	{
 		foreach (Text element in RandomNumbersList)
@@ -110,16 +110,20 @@ public class CalculatorAssignment : MonoBehaviour {
 			if (Answers.text == element.text) 
 			{
 				Destroy (element);
+				int randomNum = Random.Range (minVal, maxVal);
+				element.text = randomNum.ToString();
 			} 
 		}
 	}
 
+	//if the collider for the number hits the ground, game over
 	private void OnTriggerEnter(Collider other)
 	{
 		Destroy (other.gameObject);
 		GameOver ();
 	}
 
+	//the game over script to show the game over text
 	private void GameOver()
 	{
 		GameOverText.enabled = true;
