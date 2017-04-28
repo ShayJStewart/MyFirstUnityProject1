@@ -19,12 +19,14 @@ public class CalculatorAssignment : MonoBehaviour {
 	public Button Dividebutton;
 	public Text Answers;
 	public Text GameOverText;
+	private Vector3 startingPOS = new Vector3 (0,156.0f,0);
 
 	public List<Text> RandomNumbersList = new List<Text>();
 
 
 	void Start ()
 	{
+		
 		RandomNumbers ();
 		Add ();
 		Subtract ();
@@ -109,9 +111,10 @@ public class CalculatorAssignment : MonoBehaviour {
 		{
 			if (Answers.text == element.text) 
 			{
-				Destroy (element);
+				element.transform.position = startingPOS;
 				int randomNum = Random.Range (minVal, maxVal);
 				element.text = randomNum.ToString();
+			
 			} 
 		}
 	}
