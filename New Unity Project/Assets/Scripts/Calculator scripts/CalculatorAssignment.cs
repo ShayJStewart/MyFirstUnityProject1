@@ -20,17 +20,22 @@ public class CalculatorAssignment : MonoBehaviour {
 	public Text Answers;
 	public Text GameOverText;
 	public GameObject GamerOverPanel;
-	public Text TryAgain;
-
-
+	public Text EasyText;
+	public Text ModerateText;
+	public Text HardText;
+	//public GameObject CheckPanel;
+	//public float time = 1.5f;
 
 	public List<Text> RandomNumbersList = new List<Text>();
+
 
 
 	void Start ()
 	{
 		GamerOverPanel.SetActive(false);
-		TryAgain.enabled = false;
+		EasyText.enabled = true;
+		ModerateText.enabled = false;
+		HardText.enabled = false;
 		RandomNumbers ();
 		Add ();
 		Subtract ();
@@ -107,26 +112,68 @@ public class CalculatorAssignment : MonoBehaviour {
 	{
 		Dividebutton.interactable = false;
 	}
+		
 
 	//checks to see if the answer and one of the numbers is equal and then deletes the number if they are equal
 	public void AnswerEqual()
 	{
 		foreach (Text element in RandomNumbersList)
 		{
-			if (Answers.text == element.text) {
-
+			if (Answers.text == element.text)
+			{
 				Vector3 startingPOS = new Vector3 (element.transform.position.x, 400.0f, element.transform.position.z);
 				element.transform.position = startingPOS;
 				int randomNum = Random.Range (minVal, maxVal);
 				element.text = randomNum.ToString ();
 			
 			} 
-			else 
-			{
-				TryAgain.enabled = true;
-			} 
-
 		}
+	}
+	/*private IEnumerator Checks()
+	{
+		AnswerEqual ();
+		CheckPanel.SetActive (true);
+		yield return new WaitForSeconds (time);
+
+		print ("test");
+		CheckPanel.SetActive (false);
+	}*/
+
+	public void DifficultyLevel()
+	{
+		switch(maxVal)
+		{
+		case 50:
+			EasyText.enabled = true;
+			ModerateText.enabled = false;
+			HardText.enabled = false;
+			break;
+		case 100:
+			ModerateText.enabled = true;
+			EasyText.enabled = false;
+			HardText.enabled = false;
+			break;
+		case 150:
+			HardText.enabled = true;
+			ModerateText.enabled = false;
+			EasyText.enabled = false;
+			break;
+		}
+	}
+
+	public void Easy()
+	{
+		maxVal = 50;
+	}
+
+	public void Moderate()
+	{
+		maxVal = 100;
+	}
+
+	public void Hard()
+	{
+		maxVal = 150;
 	}
 
 	//if the collider for the number hits the ground, game over
