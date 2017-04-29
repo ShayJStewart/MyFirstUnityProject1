@@ -19,13 +19,18 @@ public class CalculatorAssignment : MonoBehaviour {
 	public Button Dividebutton;
 	public Text Answers;
 	public Text GameOverText;
+	public GameObject GamerOverPanel;
+	public Text TryAgain;
+
+
 
 	public List<Text> RandomNumbersList = new List<Text>();
 
 
 	void Start ()
 	{
-		
+		GamerOverPanel.SetActive(false);
+		TryAgain.enabled = false;
 		RandomNumbers ();
 		Add ();
 		Subtract ();
@@ -108,15 +113,19 @@ public class CalculatorAssignment : MonoBehaviour {
 	{
 		foreach (Text element in RandomNumbersList)
 		{
-			if (Answers.text == element.text) 
-			{
+			if (Answers.text == element.text) {
 
-				Vector3 startingPOS = new Vector3 (element.transform.position.x, 400.0f ,element.transform.position.z);
+				Vector3 startingPOS = new Vector3 (element.transform.position.x, 400.0f, element.transform.position.z);
 				element.transform.position = startingPOS;
 				int randomNum = Random.Range (minVal, maxVal);
-				element.text = randomNum.ToString();
+				element.text = randomNum.ToString ();
 			
 			} 
+			else 
+			{
+				TryAgain.enabled = true;
+			} 
+
 		}
 	}
 
@@ -130,7 +139,9 @@ public class CalculatorAssignment : MonoBehaviour {
 	//the game over script to show the game over text
 	private void GameOver()
 	{
+		GamerOverPanel.SetActive(true);
 		GameOverText.enabled = true;
+
 	}
 
 
